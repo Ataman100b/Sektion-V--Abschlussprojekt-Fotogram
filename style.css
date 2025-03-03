@@ -18,10 +18,10 @@ body {
 }
 
 #header_logo {
-  width: 10%;
-  margin-left: 3%;
-  min-width: 80px;
+  width: clamp(80px, 10%, 150px);
+  margin-left: clamp(10px, 3%, 30px);
 }
+
 
 
 
