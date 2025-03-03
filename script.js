@@ -1,98 +1,36 @@
-
-
-template
-
-
-
-Overlay bzw. Dialog erstellen
-<style>
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        
-    }
-
-    .d_none {
-        display: none;
-
-<style>
-<script>
-
-    function toggleOverlay() {
-    let overlayRef = document.getElementById('overlay');
-    overlayRef.classList.toggle('d_none');
-    }
-
-</script>
-
-// /*html*/
-<div onclick="toggleOverlay()" id=overlay class = overlay >Click me</div>
-
-
-
-
-
-
----------------------------------------------
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Render Doors</title>
-    <style>
-        .doors {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            margin: 5px;
-            background-color: lightblue;
-            text-align: center;
-            line-height: 50px;
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-
-  
-
-
-  // call with Giuliano
-
-// css : use wrap
-
-
-
 let images = [
-
-"./img/door1.jpg",
-
+    "./img/craiyon1.png",
+    "./img/craiyon2.png",
+    "./img/craiyon3.png",
+    "./img/craiyon4.png",
+    "./img/craiyon5.png",
+    "./img/craiyon6.png",
+    "./img/craiyon7.png",
+    "./img/craiyon8.png",
+    "./img/craiyon9.png",
+    "./img/craiyon10.png",
+    "./img/craiyon11.png",
+    "./img/craiyon12.png",
 ];
 
+function renderDoors() {
+    for (let i = 1; i < images.length + 1; i++) {
+        document.getElementById("content").innerHTML += /*html*/ `
+            <div id="door${i}" 
+            onclick="openDoor(${i})" 
+            class="doors"> ${i} 
+        </div>
+        `;
+    }
+}
+
+function openDoor(i) {
+    console.log(`Tür ${i} wurde geöffnet`);
+
+    document.getElementById(
+        `door${i}`
+    ).style.backgroundImage = `url('${images[i - 1]}')`;
+}
 
 
-    <script>
-        function renderDoors() {
-            for (let i = 1; images.lenght +1 ; i++) {  
-                document.getElementById('content').innerHTML += /*html*/ `
-                <div id="door${i+1}" onclick="openDoor(${i + 1})"   class='doors'>
 
-            `}
-
-            function openDoors(1) {
-                console.log('Door ${i+1} was clicked');
-                document.getElementById(
-                `door${i+1}`
-                ).style.backgroundImage = 'url('./img/cst{i).jpg')';
-            }
-        }
-    </script>
-
-</body>
-</html>

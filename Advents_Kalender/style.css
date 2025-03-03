@@ -1,0 +1,18 @@
+#content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.doors{
+    width: 64px;
+    height: 64px;
+    background-color: green;
+    border: 1px, solid, black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: contain;
+    
+}
