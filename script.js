@@ -13,12 +13,13 @@ let images = [
     "./img/craiyon12.png",
 ];
 
-function renderDoors() {
+function renderImages() {
     for (let i = 1; i < images.length + 1; i++) {
         document.getElementById("content").innerHTML += /*html*/ `
             <div id="door${i}" 
-            onclick="openDoor(${i})" 
-            class="doors"> ${i} 
+            onclick="toggleOverlay(${i})" 
+            class="doors" 
+            style="background-image: url('${images[i - 1]}');"> 
         </div>
         `;
     }
@@ -34,3 +35,7 @@ function openDoor(i) {
 
 
 
+function toggleOverlay() {
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.toggle('d_none');
+    }

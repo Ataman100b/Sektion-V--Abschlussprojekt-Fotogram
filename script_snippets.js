@@ -70,6 +70,8 @@ Overlay bzw. Dialog erstellen
     .d_none {
         display: none;
 
+
+
 <style>
 <script>
 
@@ -81,7 +83,7 @@ Overlay bzw. Dialog erstellen
 </script>
 
 // /*html*/
-<div onclick="toggleOverlay()" id=overlay class = overlay >Click me</div>
+
 
 
 
