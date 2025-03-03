@@ -149,3 +149,6 @@ let images = [
 
 </body>
 </html>
+
+
+<div onclick="toggleOverlay()" id="overlay" class="overlay"></div>

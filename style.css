@@ -22,13 +22,20 @@ body {
   margin-left: clamp(10px, 3%, 30px);
 }
 
+h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
 
 .main-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   flex: 1;
+  background-color: #05171E
+  
 }
 
 
@@ -57,11 +64,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: center;
 }
 
 .doors{
-  width: 64px;
-  height: 64px;
+  width: 150px;
+  height: 150px;
   background-color: green;
   border: 1px, solid, black;
   display: flex;
@@ -69,6 +77,7 @@ body {
   align-items: center;
   cursor: pointer;
   background-size: contain;
+  border-radius: 10%;
 }
 
 
