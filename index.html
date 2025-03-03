@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/Fotogram_Logo.svg" type="image/x-icon">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="renderDoors()">
 
 
     <header class="header">    
@@ -20,13 +21,15 @@
     <main>
         <section class="main-container">
             <h1>Your personnal photo album</h1>
+            <div id="content"></div>
         </section>
     </main>
 
 
     <footer class = "footer">
         <div class="footer_text">
-        <p>&copy; 2020 Fotogram</p>
+        <div>Images generated using Craiyon AI (https://www.craiyon.com)</div>
+        <div>&copy;  2020 Fotogram</div>
     </div>
     </footer>
     
